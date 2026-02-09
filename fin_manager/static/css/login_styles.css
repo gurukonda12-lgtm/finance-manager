@@ -1,0 +1,68 @@
+body {
+    /* background: #000E57; */
+    /* background: linear-gradient(45deg, #000E57 0%, #00178D 100%); */
+    /* background: -moz-linear-gradient(90deg, #000E57 0%, #00178D 100%); */
+    /* background: -moz-linear-gradient(90deg, #7a8eff 0%, #00178D 100%);     */
+    background-image: radial-gradient(circle at 52% 94%, rgba(169, 169, 169,0.04) 0%, rgba(169, 169, 169,0.04) 50%,rgba(199, 199, 199,0.04) 50%, rgba(199, 199, 199,0.04) 100%),radial-gradient(circle at 96% 98%, rgba(61, 61, 61,0.04) 0%, rgba(61, 61, 61,0.04) 50%,rgba(201, 201, 201,0.04) 50%, rgba(201, 201, 201,0.04) 100%),radial-gradient(circle at 93% 97%, rgba(227, 227, 227,0.04) 0%, rgba(227, 227, 227,0.04) 50%,rgba(145, 145, 145,0.04) 50%, rgba(145, 145, 145,0.04) 100%),radial-gradient(circle at 89% 52%, rgba(245, 245, 245,0.04) 0%, rgba(245, 245, 245,0.04) 50%,rgba(86, 86, 86,0.04) 50%, rgba(86, 86, 86,0.04) 100%),linear-gradient(90deg, rgb(3, 230, 255),rgb(255, 238, 3));
+}
+
+.btn {
+    background-color: transparent;
+    border-radius: 15%;
+    padding: 20%;
+    border: 1px solid #00177d5e;
+    font-size: medium;
+}
+
+.btn:hover {
+    opacity: 0.5;
+    background-color: navy;
+    border: 1px solid red;
+    color: black;
+}
+
+
+.container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.blur-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* background-color: rgba(0, 111, 208, 0.468); Adjust opacity for the blurred background */
+    z-index: -1; /* Place behind the form container */
+}
+
+.form-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid #00195473;
+    padding: 20px;
+    background-color: rgba(133, 221, 250, 0.209);
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.button-container {
+    margin-top: 5%;
+    text-align: center;
+}
+
+
+.form input[type="text"],
+.form input[type="password"] {
+    /* Set transparent background for input fields */
+    background-color: transparent;
+    border: 1px solid #00177d5e;
+    padding: 5px 10px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}

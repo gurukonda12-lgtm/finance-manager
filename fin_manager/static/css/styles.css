@@ -1,0 +1,82 @@
+/* Example CSS for form fields */
+body {
+    /* background: #560000;
+    background: linear-gradient(174deg, #560000 17%, #000000 93%);
+    background: -webkit-linear-gradient(174deg, #560000 17%, #000000 93%);
+    background: -moz-linear-gradient(174deg, #560000 17%, #000000 93%); */
+    background-color: #31242a;
+    color: white;  
+    align-items: center;
+    text-align: center;
+    align-content: center;
+    
+}
+
+.img {
+    aspect-ratio: auto;   
+}
+
+form {
+    max-width: 700px;
+    text-align: center;
+    margin: 0px auto;
+}
+
+
+.form-control {
+    /* width: 50%; */
+    color: black;
+    padding: 10px;
+    border: 1px solid #000000;
+    border-radius: 5px;
+    background-color: transparent;
+}
+
+/* Example CSS for buttons */
+button {
+    padding: 10px 20px;
+    background-color: #29007c;
+    color: #fffbd1;
+    border: none;
+    border-radius: 5px;
+}
+
+.plotly-chart {
+    width: 100%;
+    height: 400px;
+    margin-top: 20px;
+    /* border: 1px solid #29007c; */
+    border-radius: 5px;
+    background-color: transparent;
+}
+
+.expenses {
+    margin-top: 20px;
+}
+
+.month {
+    margin-bottom: 20px;
+    /* border: 1px solid #29007c; */
+    padding: 10px;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.month h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    display: inline-flex;
+}
+
+.month ul {
+    list-style: none;
+    padding: 0;
+}
+
+.month li {
+    margin-bottom: 5px;
+}
+
+.date-range {
+    font-style: italic;
+}
