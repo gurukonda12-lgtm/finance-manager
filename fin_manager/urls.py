@@ -1,10 +1,19 @@
-#from django.conf.urls import url
-from django.urls import path, include
+from django.urls import path
 from . import views
+from .views import ExpenseListView
+from django.contrib.auth import views as auth_views
 
 urlpatterns = [
+
     path('', views.home, name='home'),
-    path('expenses', name='expenses', view=views.ExpenseListView.as_view()),
-    path('accounts/register/', views.register, name='register'),
-    path('accounts/', include('django.contrib.auth.urls')),
+
+    path('register/', views.register, name='register'),
+
+    path('login/', auth_views.LoginView.as_view(
+        template_name='registration/login.html'
+    ), name='login'),
+
+    path('logout/', views.user_logout, name='logout'),
+
+    path('expenses/', ExpenseListView.as_view(), name='expenses'),
 ]

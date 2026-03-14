@@ -1,18 +1,10 @@
-# Python
 __pycache__/
 *.pyc
-
-# Django
 db.sqlite3
-*.log
-
-# Virtual environment
+.env
+.venv
 venv/
-
-# Static & media (optional)
-staticfiles/
-media/
-
-# IDE
-.vscode/
-.idea/
+.env/
+.env.*
+.DS_Store
+*.log

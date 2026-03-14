@@ -1,6 +1,7 @@
 from django.db import models
 from django.db.models import Sum, Count, F, Q
 from datetime import datetime
+from django.utils import timezone
 from dateutil.relativedelta import *
 
 
@@ -18,7 +19,9 @@ class Account(models.Model):
 class Liability(models.Model):
     name = models.CharField(max_length=100)
     amount = models.FloatField(default=0)
-    date = models.DateField(null=False, default=datetime.now().date())
+    
+
+    date = models.DateField(default=timezone.now)
     long_term = models.BooleanField(default=False)
     interest_rate = models.FloatField(default=0, blank=True, null=True)
     end_date = models.DateField(blank=True, null=True)

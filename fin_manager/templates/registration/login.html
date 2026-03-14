@@ -1,33 +1,49 @@
 {% load static %}
+
+<html>
+
 <head>
-  <link rel="stylesheet" type="text/css" href="{% static 'css/login_styles.css' %}">
+
+  <link rel="stylesheet" href="{% static 'css/login_styles.css' %}">
+
 </head>
 
-{% block content %}
+<body>
 
-{% if form.errors %}
-  <p>Your username and password didn't match. Please try again.</p>
-{% endif %}
+  <h2 style="text-align:center;">Login</h2>
 
-<form method="post" action="{% url 'login' %}">
-{% csrf_token %}
+  {% if form.errors %}
+  <p style="color:red;text-align:center;">Invalid username or password</p>
+  {% endif %}
 
-<div class="container">
-  <div class="blur-background"></div>
-  <div class="form-container">
-      <div class="form">
-        <h2 style="text-align: center;"> Sign In </h2>
-          {{ form.username.label_tag }}
-          {{ form.username }}
-          <br><br>
-          {{ form.password.label_tag }}
-          {{ form.password }}
-      </div>
-      <div class="button-container">
-          <input type="submit" class="btn btn-primary" value="Login" />
-      </div>
-  </div>
-</div>
+  <form method="post" action="{% url 'login' %}">
 
-</form>
-{% endblock %}
+    {% csrf_token %}
+
+    <div style="text-align:center">
+
+      {{ form.username.label_tag }}
+      <br>
+      {{ form.username }}
+
+      <br><br>
+
+      {{ form.password.label_tag }}
+      <br>
+      {{ form.password }}
+
+      <br><br>
+
+      <button type="submit">Login</button>
+
+      <br><br>
+
+      <a href="{% url 'register' %}">Create new account</a>
+
+    </div>
+
+  </form>
+
+</body>
+
+</html>

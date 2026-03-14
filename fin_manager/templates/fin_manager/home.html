@@ -1,30 +1,39 @@
 {% load static %}
-
 <html>
-	<head>
-		<title>Home</title>
-		<link rel="stylesheet" type="text/css" href="{% static 'css/home.css' %}">
-	</head>
-	<body>
-	{% block content %}
-	<div>
+
+<head>
+	<title>Finance Manager</title>
+	<link rel="stylesheet" href="{% static 'css/home.css' %}">
+</head>
+
+<body>
+
+	<div class="home">
+
 		{% if user.is_authenticated %}
-    		<h2>Welcome, {{ user.username }}!</h2>
-				<a href="{% url 'expenses' %}">Open Expenses</a>
+
+		<h2>Welcome, {{ user.username }}!</h2>
+
+		<a href="{% url 'expenses' %}">Open Expenses</a>
+		<br><br>
+		<a href="{% url 'logout' %}">Logout</a>
+
 		{% else %}
-			<div class="home">
-			<h2>Welcome! </h2>
-				<div class="reg"> 
-				<h2><a href="{% url 'register' %}">Register</a> </h2>
-				</div>
-				<div class="log">
-				<h2> <a href="{% url 'login' %}">Login</a> </h2>
-				</div>
-			</div>
+
+		<h1>Welcome to Finance Manager</h1>
+
+		<br>
+
+		<a href="{% url 'register' %}">Register</a>
+
+		<br><br>
+
+		<a href="{% url 'login' %}">Login</a>
+
 		{% endif %}
+
 	</div>
-		{% endblock %}
 
+</body>
 
-	</body>
 </html>
